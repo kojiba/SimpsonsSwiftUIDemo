@@ -52,3 +52,20 @@ struct SimpsonsEpisodeModel: Identifiable, Codable {
         case views = "views"
     }
 }
+
+extension SimpsonsEpisodeModel {
+    static let empty = SimpsonsEpisodeModel(id: 0,
+        imageUrlString: "",
+        imdbRating: 0,
+        imdbVotes: 0,
+        numberInSeason: 0,
+        numberInSeries: 0,
+        originalAirDateString: "",
+        originalAirYear: 0,
+        productionCode: "",
+        season: 0,
+        title: "",
+        usViewersInMillions: 0,
+        videoUrl: "",
+        views: 0)
+}

@@ -9,24 +9,35 @@
 import SwiftUI
 
 struct CollectionView: View {
+    @State var data: SimpsonsEpisodesModel = .empty
+
     var body: some View {
-        Text("Hello, World!")
-            .simpsonsFont()
+        ScrollView {
+            ForEach(self.data.episodes) { episode in
+                CollectionItemView(episodeModel: episode)
+            }
+        }
             .onAppear(perform: loadData)
     }
 
     func loadData() {
-        let manager = DataManager.shared
+        DispatchQueue.global().async {
+            let manager = DataManager.shared
 
-        guard let data = manager.loadJSONData() else {
-            return
+            guard let data = manager.loadJSONData() else {
+                return
+            }
+
+            guard let episodes = manager.parseDataJSON(jsonData: data) else {
+                return
+            }
+
+            print(episodes.episodes)
+            
+            DispatchQueue.main.async {
+                self.data = episodes
+            }
         }
-
-        guard let episodes = manager.parseDataJSON(jsonData: data) else {
-            return
-        }
-
-        print(episodes.episodes)
     }
 }
 

@@ -9,13 +9,19 @@
 import SwiftUI
 
 struct CollectionItemView: View {
+    var episodeModel: SimpsonsEpisodeModel
+
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            AsyncImage(url: episodeModel.imageUrl)
+            Text(episodeModel.title)
+                .simpsonsFont()
+        }
     }
 }
 
 struct CollectionItemView_Previews: PreviewProvider {
     static var previews: some View {
-        CollectionItemView()
+        CollectionItemView(episodeModel: .empty)
     }
 }

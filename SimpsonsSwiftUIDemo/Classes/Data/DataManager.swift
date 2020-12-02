@@ -9,6 +9,10 @@ struct SimpsonsEpisodesModel: Codable {
     let episodes: [SimpsonsEpisodeModel]
 }
 
+extension SimpsonsEpisodesModel {
+    static let empty = SimpsonsEpisodesModel(episodes: [])
+}
+
 class DataManager {
 
     static let shared = DataManager()

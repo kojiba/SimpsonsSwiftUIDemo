@@ -11,8 +11,12 @@ import SwiftUI
 struct AsyncImage: View {
     @ObservedObject private var loader: ImageLoader
 
-    init(urlString: String, cache: ImageCache) {
-        loader = ImageLoader(url: URL(string: urlString), cache: cache)
+    init(urlString: String, cache: ImageCache = ImageCache.shared) {
+        self.init(url: URL(string: urlString), cache: cache)
+    }
+
+    init(url: URL?, cache: ImageCache = ImageCache.shared) {
+        loader = ImageLoader(url: url, cache: cache)
     }
 
     var body: some View {
@@ -37,8 +41,6 @@ struct AsyncImage: View {
 
 struct AsyncImage_Previews: PreviewProvider {
     static var previews: some View {
-        AsyncImage(
-            urlString: "http://static-media.fxx.com/img/FX_Networks_-_FXX/684/590/Simpsons_05_10.jpg",
-            cache: ImageCache())
+        AsyncImage(urlString: "http://static-media.fxx.com/img/FX_Networks_-_FXX/684/590/Simpsons_05_10.jpg")
     }
 }

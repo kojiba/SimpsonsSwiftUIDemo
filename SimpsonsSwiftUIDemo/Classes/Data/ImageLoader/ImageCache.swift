@@ -9,6 +9,8 @@
 import UIKit
 
 class ImageCache: ObservableObject {
+    static let shared = ImageCache()
+    
     private let cache = NSCache<NSURL, UIImage>()
 
     subscript(_ key: URL) -> UIImage? {
