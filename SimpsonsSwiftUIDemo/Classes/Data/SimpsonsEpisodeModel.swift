@@ -6,7 +6,6 @@
 //  Copyright © 2020 kojiba. All rights reserved.
 //
 
-
 import SwiftUI
 
 struct SimpsonsEpisodeModel: Identifiable, Codable {
@@ -26,13 +25,15 @@ struct SimpsonsEpisodeModel: Identifiable, Codable {
     let videoUrl: String
     let views: Int
 
-//    var originalAirDate: Date? {
-//        Date(originalAirDateString)
-//    }
+    var originalAirDate: Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.date(from:originalAirDateString)
+    }
 
-//    var imageUrl: URL {
-//
-//    }
+    var imageUrl: URL? {
+        URL(string: imageUrlString)
+    }
 
     enum CodingKeys: String, CodingKey {
         case id = "id"
