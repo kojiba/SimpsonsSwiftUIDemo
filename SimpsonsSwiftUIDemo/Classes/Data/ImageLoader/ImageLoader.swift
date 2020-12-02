@@ -18,7 +18,7 @@ class ImageLoader: ObservableObject {
     private var cache: ImageCache
     private var cancellable: AnyCancellable?
 
-    private static let imageProcessingQueue = DispatchQueue(label: "image-processing-queue")
+    private static let imageProcessingQueue = DispatchQueue.global()
 
     init(url: URL?, cache: ImageCache) {
         self.url = url
@@ -32,6 +32,7 @@ class ImageLoader: ObservableObject {
     func load() {
         guard !isLoading else { return }
         guard let url = url else { return }
+        
         if let image = cache[url] {
             self.image = image
             return

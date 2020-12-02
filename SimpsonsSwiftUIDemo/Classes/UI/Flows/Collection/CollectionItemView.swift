@@ -9,19 +9,22 @@
 import SwiftUI
 
 struct CollectionItemView: View {
-    var episodeModel: SimpsonsEpisodeModel
+    @State var episodes: [SimpsonsEpisodeModel]
+    var episodeViewClicked: (_: SimpsonsEpisodeModel) -> Void = { episode in }
 
     var body: some View {
-        VStack {
-            AsyncImage(url: episodeModel.imageUrl)
-            Text(episodeModel.title)
-                .simpsonsFont()
+        HStack {
+            ForEach(self.episodes) { episode in
+                Button(action: { self.episodeViewClicked(episode) }) {
+                    EpisodeItemView(episodeModel: episode)
+                }
+            }
         }
     }
 }
 
 struct CollectionItemView_Previews: PreviewProvider {
     static var previews: some View {
-        CollectionItemView(episodeModel: .empty)
+        CollectionItemView(episodes: [.empty, .empty])
     }
 }

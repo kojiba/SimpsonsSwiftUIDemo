@@ -9,13 +9,22 @@
 import SwiftUI
 
 struct DetailItemView: View {
+    @State var item: DetailItemViewModel
+    
     var body: some View {
-        Text("Hello, World!")
+        HStack {
+            Text(item.title)
+            
+            Spacer(minLength: 8)
+            
+            Text(item.value)
+        }
+            .simpsonsFont()
     }
 }
 
 struct DetailItemView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailItemView()
+        DetailItemView(item: DetailItemViewModel(title: "Title", value: "Value"))
     }
 }

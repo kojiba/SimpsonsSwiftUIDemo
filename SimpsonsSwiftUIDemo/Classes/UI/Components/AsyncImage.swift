@@ -23,8 +23,12 @@ struct AsyncImage: View {
         VStack {
             stateView()
         }
-            .onAppear(perform: loader.load)
-            .onDisappear(perform: loader.cancel)
+            .onAppear(perform: {
+                self.loader.load()
+            })
+            .onDisappear(perform: {
+                self.loader.cancel()
+            })
     }
 
     private func stateView() -> AnyView {

@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct SimpsonsEpisodeModel: Identifiable, Codable {
+struct SimpsonsEpisodeModel: Identifiable, Codable, Hashable {
     private(set) var id: Int
     
     let imageUrlString: String

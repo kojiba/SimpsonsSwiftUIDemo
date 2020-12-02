@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BCE480585A6F93D579D45FB9 /* String+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4864388EA8A865D498AAB /* String+Identifiable.swift */; };
 		BCE480855CF54A6D8EA92113 /* Color+SystemColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE489D6E7A2FEB1C47B5B5E /* Color+SystemColors.swift */; };
 		BCE480CAEDF2B9B432D59F9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48E995CEE54E916D6482E /* AppDelegate.swift */; };
 		BCE4821A57C270905E2CB199 /* SimpsonsEpisodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48F9EA1C36632F38D87FA /* SimpsonsEpisodeModel.swift */; };
@@ -14,6 +15,7 @@
 		BCE48254272107BC47F8DC59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE4850DD505BD9B53A1AC64 /* LaunchScreen.storyboard */; };
 		BCE483EEFC750697F5F17CEC /* Font+CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE485BFC19E223981D5B3C1 /* Font+CustomFont.swift */; };
 		BCE484E3B7D336DB00B0174A /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48902B4994F222F07E826 /* ImageLoader.swift */; };
+		BCE4853C3368CB97913A1576 /* EpisodeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48691B142C779BEA71A3D /* EpisodeItemView.swift */; };
 		BCE485CB181FDD396DB1BB21 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE488C56EE8B62001C74573 /* ActivityIndicator.swift */; };
 		BCE486EDBE2C9952BD774694 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4856840992B6DCD3CAA5F /* DataManager.swift */; };
 		BCE487C1B30F150C59A5F5D1 /* simpsons_font.otf in Resources */ = {isa = PBXBuildFile; fileRef = BCE48201DBEFD0166C932852 /* simpsons_font.otf */; };
@@ -50,6 +52,8 @@
 		BCE4850DD505BD9B53A1AC64 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCE4856840992B6DCD3CAA5F /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		BCE485BFC19E223981D5B3C1 /* Font+CustomFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+CustomFont.swift"; sourceTree = "<group>"; };
+		BCE4864388EA8A865D498AAB /* String+Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Identifiable.swift"; sourceTree = "<group>"; };
+		BCE48691B142C779BEA71A3D /* EpisodeItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeItemView.swift; sourceTree = "<group>"; };
 		BCE487D551346E8CEF7813FF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		BCE488C56EE8B62001C74573 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		BCE48902B4994F222F07E826 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				BCE48124F865602A57D7AD17 /* View+ToAnyView.swift */,
+				BCE4864388EA8A865D498AAB /* String+Identifiable.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 			children = (
 				BCE48A959AE4F0896C335D6E /* CollectionView.swift */,
 				BCE489F0FAE572EA976BED70 /* CollectionItemView.swift */,
+				BCE48691B142C779BEA71A3D /* EpisodeItemView.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -375,6 +381,8 @@
 				BCE484E3B7D336DB00B0174A /* ImageLoader.swift in Sources */,
 				BCE48EFF3ABD7E5C2CB2A427 /* ImageCache.swift in Sources */,
 				BCE48D09B82EC98AAA59ECE0 /* View+ToAnyView.swift in Sources */,
+				BCE4853C3368CB97913A1576 /* EpisodeItemView.swift in Sources */,
+				BCE480585A6F93D579D45FB9 /* String+Identifiable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
