@@ -14,12 +14,15 @@ struct DetailItemView: View {
     var body: some View {
         HStack {
             Text(item.title)
+                .minimumScaleFactor(0.7)
             
-            Spacer(minLength: 8)
+            Spacer(minLength: .spacing)
             
             Text(item.value)
+                .minimumScaleFactor(0.5)
         }
             .simpsonsFont()
+            .foregroundColor(.label)
     }
 }
 

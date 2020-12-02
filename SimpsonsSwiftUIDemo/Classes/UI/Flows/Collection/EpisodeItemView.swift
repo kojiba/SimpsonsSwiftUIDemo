@@ -13,24 +13,39 @@ struct EpisodeItemView: View {
 
     var body: some View {
         VStack {
-            HStack {
-                Spacer(minLength: .zero)
-                VStack {
+            VStack {
+                HStack {
                     Spacer(minLength: .zero)
-                    AsyncImage(url: episodeModel.imageUrl)
+                    VStack {
+                        Spacer(minLength: .zero)
+                        AsyncImage(url: episodeModel.imageUrl)
+                            .cornerRadius(.spacing)
+                        
+                        Spacer(minLength: .zero)
+                    }
                     Spacer(minLength: .zero)
                 }
-                Spacer(minLength: .zero)
+
+                Text(episodeModel.title)
+                    .multilineTextAlignment(.center)
+                    .simpsonsFont()
+                    .minimumScaleFactor(0.5)
+                    .foregroundColor(.label)
             }
-            Text(episodeModel.title)
-                .multilineTextAlignment(.center)
-                .simpsonsFont()
+                .padding(.all, .spacing * 2)
         }
+            .background(
+                RoundedRectangle(cornerRadius: .spacing * 2, style: .continuous)
+                    .foregroundColor(.secondaryLabel)
+                    .padding(.all, .spacing)
+                    .defaultShadow()
+            )
+            .frame(height: 150)
     }
 }
 
 struct EpisodeItemView_Previews: PreviewProvider {
     static var previews: some View {
-        EpisodeItemView(episodeModel: .empty)
+        EpisodeItemView(episodeModel: .sample)
     }
 }

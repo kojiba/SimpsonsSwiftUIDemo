@@ -12,7 +12,9 @@ struct LoadingView: View {
     var body: some View {
         VStack {
             ActivityIndicator(isAnimating: .constant(true), style: .large)
-            Text("Loading...")
+            Text("Gathering family...")
+                .foregroundColor(.label)
+                .simpsonsFont()
         }
     }
 }

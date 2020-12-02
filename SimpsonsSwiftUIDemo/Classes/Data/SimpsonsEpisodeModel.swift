@@ -68,4 +68,19 @@ extension SimpsonsEpisodeModel {
         usViewersInMillions: 0,
         videoUrl: "",
         views: 0)
+
+    static let sample = SimpsonsEpisodeModel(id: 0,
+        imageUrlString: "http://static-media.fxx.com/img/FX_Networks_-_FXX/662/811/Simpsons_02_08.jpg",
+        imdbRating: 1,
+        imdbVotes: 2,
+        numberInSeason: 3,
+        numberInSeries: 5,
+        originalAirDateString: "123",
+        originalAirYear: 123,
+        productionCode: "123",
+        season: 123,
+        title: "Sample",
+        usViewersInMillions: 10,
+        videoUrl: "VideoURL",
+        views: 100)
 }

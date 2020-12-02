@@ -22,16 +22,36 @@ struct DetailView: View {
     @State private var items: [DetailItemViewModel] = []
     
     var body: some View {
-        VStack {
-            ScrollView {
+        ScrollView {
+            VStack {
                 VStack {
-                    ForEach(self.items) { item in
-                        DetailItemView(item: item)
+
+                    HStack {
+                        Spacer(minLength: .zero)
+                        AsyncImage(url: episode.imageUrl)
+                        Spacer(minLength: .zero)
                     }
+                        .frame(minHeight: 100)
+
+                    Text("\(episode.title)")
+                        .simpsonsFont()
+                        .foregroundColor(.label)
+                        .padding(.vertical, .spacing * 3)
+                }
+
+                ForEach(self.items) { item in
+                    DetailItemView(item: item)
+                }
+
+                Spacer(minLength: .zero)
+                HStack {
+                    Spacer(minLength: .zero)
                 }
             }
-            Spacer()
+                .padding(.horizontal, .spacing)
         }
+            .edgesIgnoringSafeArea(.bottom)
+            .navigationBarTitle("Episode Details", displayMode: .inline)
             .onAppear(perform: onAppear)
     }
 
@@ -46,7 +66,6 @@ struct DetailView: View {
             DetailItemViewModel(title: "Original Air Year", value: "\(episode.originalAirYear)"),
             DetailItemViewModel(title: "ProductionCode", value: "\(episode.productionCode)"),
             DetailItemViewModel(title: "Season", value: "\(episode.season)"),
-            DetailItemViewModel(title: "Title", value: "\(episode.title)"),
             DetailItemViewModel(title: "Us Viewers (In Millions)", value: "\(episode.usViewersInMillions)"),
             DetailItemViewModel(title: "Video URL", value: episode.videoUrl),
             DetailItemViewModel(title: "Views count", value: "\(episode.views)")

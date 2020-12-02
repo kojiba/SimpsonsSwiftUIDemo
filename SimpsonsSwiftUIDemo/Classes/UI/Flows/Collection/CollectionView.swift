@@ -39,17 +39,18 @@ struct CollectionView: View {
     }
 
     private func collectionView(groups: [[SimpsonsEpisodeModel]]) -> some View {
-        VStack {
+//        VStack {
             ScrollView {
                 VStack {
                     ForEach(groups, id: \.self) { episodeGroup in
                         CollectionItemView(episodes: episodeGroup,
                             episodeViewClicked: self.episodeViewClicked)
                     }
+                    Spacer(minLength: .zero)
                 }
             }
-            Spacer()
-        }
+//            Spacer(minLength: .zero)
+//        }
     }
     
     private func episodeViewClicked(_ episode: SimpsonsEpisodeModel) {
