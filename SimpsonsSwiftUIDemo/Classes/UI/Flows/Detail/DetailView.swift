@@ -32,6 +32,7 @@ struct DetailView: View {
                         Spacer(minLength: .zero)
                     }
                         .frame(minHeight: 100)
+                        .cornerRadius(.spacing * 2)
 
                     Text("\(episode.title)")
                         .simpsonsFont()

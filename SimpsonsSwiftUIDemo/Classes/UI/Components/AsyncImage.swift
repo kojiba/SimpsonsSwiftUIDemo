@@ -40,7 +40,7 @@ struct AsyncImage: View {
                 .toAnyView()
             
         } else {
-            return ActivityIndicator(isAnimating: .constant(true), style: .medium, color: .systemGray5)
+            return ActivityIndicator(isAnimating: .constant(true), style: .medium, color: .systemGray6)
                 .toAnyView()
         }
     }

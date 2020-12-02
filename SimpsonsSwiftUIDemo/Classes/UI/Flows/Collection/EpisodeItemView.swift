@@ -36,7 +36,7 @@ struct EpisodeItemView: View {
         }
             .background(
                 RoundedRectangle(cornerRadius: .spacing * 2, style: .continuous)
-                    .foregroundColor(.secondaryLabel)
+                    .foregroundColor(.systemGray4)
                     .padding(.all, .spacing)
                     .defaultShadow()
             )
