@@ -20,21 +20,24 @@ struct AsyncImage: View {
     }
 
     var body: some View {
-        image
+        VStack {
+            stateView()
+        }
             .onAppear(perform: loader.load)
             .onDisappear(perform: loader.cancel)
     }
 
-    private var image: some View {
-        Group {
-            if loader.image != nil {
-                Image(uiImage: loader.image!)
-                    .renderingMode(.original)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-            } else {
-                ActivityIndicator(isAnimating: .constant(true), style: .medium, color: .systemGray)
-            }
+    private func stateView() -> AnyView {
+        if let image = loader.image {
+            return Image(uiImage: image)
+                .renderingMode(.original)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .toAnyView()
+            
+        } else {
+            return ActivityIndicator(isAnimating: .constant(true), style: .medium, color: .systemGray)
+                .toAnyView()
         }
     }
 }

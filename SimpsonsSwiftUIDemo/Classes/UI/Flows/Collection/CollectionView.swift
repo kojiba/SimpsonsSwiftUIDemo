@@ -8,16 +8,44 @@
 
 import SwiftUI
 
+struct Pair<Type> {
+    var left: Type
+    var right: Type?
+}
+
 struct CollectionView: View {
-    @State var data: SimpsonsEpisodesModel = .empty
+    @State var data: SimpsonsEpisodesModel?
 
     var body: some View {
-        ScrollView {
-            ForEach(self.data.episodes) { episode in
-                CollectionItemView(episodeModel: episode)
-            }
+        VStack {
+            stateView
         }
             .onAppear(perform: loadData)
+    }
+    
+    private var stateView: AnyView {
+        if let episodes = data {
+            return collectionView(episodes: episodes).toAnyView()
+        } else {
+            return
+                LoadingView().toAnyView()
+        }
+    }
+
+    private func collectionView(episodes: SimpsonsEpisodesModel) -> some View {
+        VStack {
+            ScrollView {
+                VStack {
+                    ForEach(episodes.episodes) { episode in
+                        HStack {
+                            CollectionItemView(episodeModel: episode)
+                            CollectionItemView(episodeModel: episode)
+                        }
+                    }
+                }
+            }
+            Spacer()
+        }
     }
 
     func loadData() {
@@ -35,7 +63,12 @@ struct CollectionView: View {
             print(episodes.episodes)
             
             DispatchQueue.main.async {
-                self.data = episodes
+//                let resultEpisodes = episodes.episodes.prefix(20)
+//                let result = SimpsonsEpisodesModel(episodes: Array(resultEpisodes))
+
+                let result = episodes
+
+                self.data = result
             }
         }
     }

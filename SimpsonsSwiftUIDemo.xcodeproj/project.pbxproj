@@ -20,6 +20,7 @@
 		BCE489803262B1C64B8C1229 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48C2B959280DC4292DD32 /* LoadingView.swift */; };
 		BCE48A2AC930568BEE2501A9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48ECF61EAF1A302529B14 /* DetailView.swift */; };
 		BCE48B8A56C823D97E1D653C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE48FC87EAB3B58BE817981 /* Assets.xcassets */; };
+		BCE48D09B82EC98AAA59ECE0 /* View+ToAnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48124F865602A57D7AD17 /* View+ToAnyView.swift */; };
 		BCE48D3B02615448DA4E70D0 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48A959AE4F0896C335D6E /* CollectionView.swift */; };
 		BCE48E5452A3FF62F7A4BFD2 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48F61DA52303EEB046BCB /* AsyncImage.swift */; };
 		BCE48EF074B33BA6A2F90567 /* DetailItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48E30150192B1F9046BF7 /* DetailItemView.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		BCE480CD624B5368361E4670 /* simpsons_episodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = simpsons_episodes.json; sourceTree = "<group>"; };
+		BCE48124F865602A57D7AD17 /* View+ToAnyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+ToAnyView.swift"; sourceTree = "<group>"; };
 		BCE48201DBEFD0166C932852 /* simpsons_font.otf */ = {isa = PBXFileReference; lastKnownFileType = file.otf; path = simpsons_font.otf; sourceTree = "<group>"; };
 		BCE482754DBD27FC1A550BF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BCE483D366FF3610D04A6FBF /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		BCE486684A23EBE4B861EAE0 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				BCE48124F865602A57D7AD17 /* View+ToAnyView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				BCE48E5452A3FF62F7A4BFD2 /* AsyncImage.swift in Sources */,
 				BCE484E3B7D336DB00B0174A /* ImageLoader.swift in Sources */,
 				BCE48EFF3ABD7E5C2CB2A427 /* ImageCache.swift in Sources */,
+				BCE48D09B82EC98AAA59ECE0 /* View+ToAnyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

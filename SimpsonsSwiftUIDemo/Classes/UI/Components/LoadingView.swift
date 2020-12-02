@@ -10,7 +10,10 @@ import SwiftUI
 
 struct LoadingView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            ActivityIndicator(isAnimating: .constant(true), style: .large)
+            Text("Loading...")
+        }
     }
 }
 
