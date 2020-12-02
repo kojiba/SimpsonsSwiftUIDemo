@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BCE480855CF54A6D8EA92113 /* Color+SystemColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE489D6E7A2FEB1C47B5B5E /* Color+SystemColors.swift */; };
 		BCE480CAEDF2B9B432D59F9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48E995CEE54E916D6482E /* AppDelegate.swift */; };
+		BCE4821A57C270905E2CB199 /* SimpsonsEpisodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48F9EA1C36632F38D87FA /* SimpsonsEpisodeModel.swift */; };
 		BCE48243B6EBE43479D4C423 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE482754DBD27FC1A550BF8 /* SceneDelegate.swift */; };
 		BCE48254272107BC47F8DC59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE4850DD505BD9B53A1AC64 /* LaunchScreen.storyboard */; };
-		BCE482AE715E7D18BB55EE9E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48F91F56C981AAF8D4C93 /* ContentView.swift */; };
+		BCE483EEFC750697F5F17CEC /* Font+CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE485BFC19E223981D5B3C1 /* Font+CustomFont.swift */; };
+		BCE486EDBE2C9952BD774694 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4856840992B6DCD3CAA5F /* DataManager.swift */; };
+		BCE487C1B30F150C59A5F5D1 /* simpsons_font.otf in Resources */ = {isa = PBXBuildFile; fileRef = BCE48201DBEFD0166C932852 /* simpsons_font.otf */; };
+		BCE489803262B1C64B8C1229 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48C2B959280DC4292DD32 /* LoadingView.swift */; };
+		BCE48A2AC930568BEE2501A9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48ECF61EAF1A302529B14 /* DetailView.swift */; };
 		BCE48B8A56C823D97E1D653C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE48FC87EAB3B58BE817981 /* Assets.xcassets */; };
+		BCE48D3B02615448DA4E70D0 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48A959AE4F0896C335D6E /* CollectionView.swift */; };
+		BCE48EF074B33BA6A2F90567 /* DetailItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48E30150192B1F9046BF7 /* DetailItemView.swift */; };
+		BCE48F5795DE3168224794B3 /* CollectionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE489F0FAE572EA976BED70 /* CollectionItemView.swift */; };
 		FBEEA20325778AF30071FBA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBEEA20225778AF30071FBA8 /* Preview Assets.xcassets */; };
 		FBEEA21125778AF30071FBA8 /* SimpsonsSwiftUIDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEEA21025778AF30071FBA8 /* SimpsonsSwiftUIDemoTests.swift */; };
+		FBEEA21B2577B1DB0071FBA8 /* simpsons_episodes.json in Resources */ = {isa = PBXBuildFile; fileRef = BCE480CD624B5368361E4670 /* simpsons_episodes.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,11 +37,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BCE480CD624B5368361E4670 /* simpsons_episodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = simpsons_episodes.json; sourceTree = "<group>"; };
+		BCE48201DBEFD0166C932852 /* simpsons_font.otf */ = {isa = PBXFileReference; lastKnownFileType = file.otf; path = simpsons_font.otf; sourceTree = "<group>"; };
 		BCE482754DBD27FC1A550BF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BCE4850DD505BD9B53A1AC64 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BCE4856840992B6DCD3CAA5F /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		BCE485BFC19E223981D5B3C1 /* Font+CustomFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+CustomFont.swift"; sourceTree = "<group>"; };
 		BCE487D551346E8CEF7813FF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		BCE489D6E7A2FEB1C47B5B5E /* Color+SystemColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+SystemColors.swift"; sourceTree = "<group>"; };
+		BCE489F0FAE572EA976BED70 /* CollectionItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionItemView.swift; sourceTree = "<group>"; };
+		BCE48A959AE4F0896C335D6E /* CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		BCE48C2B959280DC4292DD32 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		BCE48E30150192B1F9046BF7 /* DetailItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailItemView.swift; sourceTree = "<group>"; };
 		BCE48E995CEE54E916D6482E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BCE48F91F56C981AAF8D4C93 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BCE48ECF61EAF1A302529B14 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		BCE48F9EA1C36632F38D87FA /* SimpsonsEpisodeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpsonsEpisodeModel.swift; sourceTree = "<group>"; };
 		BCE48FC87EAB3B58BE817981 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBEEA1F625778AF00071FBA8 /* SimpsonsSwiftUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpsonsSwiftUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBEEA20225778AF30071FBA8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -58,6 +78,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BCE4804784C0C9BF8D3F69F4 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				BCE48201DBEFD0166C932852 /* simpsons_font.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		BCE48240F6E8EED07ADCFE53 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				BCE48E30150192B1F9046BF7 /* DetailItemView.swift */,
+				BCE48ECF61EAF1A302529B14 /* DetailView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		BCE482E27103B8D528B1BDF0 /* SystemDelegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,39 +104,88 @@
 			path = SystemDelegates;
 			sourceTree = "<group>";
 		};
-		BCE483072607101C771ED74E /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
 		BCE485C822F2B146977CDCAA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				BCE48FC87EAB3B58BE817981 /* Assets.xcassets */,
 				BCE4850DD505BD9B53A1AC64 /* LaunchScreen.storyboard */,
 				BCE487D551346E8CEF7813FF /* Info.plist */,
+				BCE4804784C0C9BF8D3F69F4 /* Font */,
+				BCE48CB4972D1F9AA6E3A79D /* DB */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		BCE486684A23EBE4B861EAE0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		BCE488D368FE0F1017BD4E11 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BCE48FA7D100D09BAD795AE6 /* Collection */,
-				BCE483072607101C771ED74E /* Detail */,
 				BCE482E27103B8D528B1BDF0 /* SystemDelegates */,
+				BCE48C89C3AD3233427868EA /* UI */,
+				BCE489B9B8FFF8A9F691A4D1 /* Models */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		BCE48FA7D100D09BAD795AE6 /* Collection */ = {
+		BCE489B9B8FFF8A9F691A4D1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BCE48F91F56C981AAF8D4C93 /* ContentView.swift */,
+				BCE48F9EA1C36632F38D87FA /* SimpsonsEpisodeModel.swift */,
+				BCE4856840992B6DCD3CAA5F /* DataManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BCE48C13D484C3AFCBCE5611 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				BCE48240F6E8EED07ADCFE53 /* Detail */,
+				BCE48D57B8C2D788410BFD0C /* Collection */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		BCE48C89C3AD3233427868EA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				BCE48F4731AB7E72993BF8D7 /* Components */,
+				BCE48C13D484C3AFCBCE5611 /* Flows */,
+				BCE486684A23EBE4B861EAE0 /* Helpers */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		BCE48CB4972D1F9AA6E3A79D /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				BCE480CD624B5368361E4670 /* simpsons_episodes.json */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		BCE48D57B8C2D788410BFD0C /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				BCE48A959AE4F0896C335D6E /* CollectionView.swift */,
+				BCE489F0FAE572EA976BED70 /* CollectionItemView.swift */,
 			);
 			path = Collection;
+			sourceTree = "<group>";
+		};
+		BCE48F4731AB7E72993BF8D7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BCE48C2B959280DC4292DD32 /* LoadingView.swift */,
+				BCE489D6E7A2FEB1C47B5B5E /* Color+SystemColors.swift */,
+				BCE485BFC19E223981D5B3C1 /* Font+CustomFont.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		FBEEA1ED25778AF00071FBA8 = {
@@ -228,9 +314,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBEEA21B2577B1DB0071FBA8 /* simpsons_episodes.json in Resources */,
 				FBEEA20325778AF30071FBA8 /* Preview Assets.xcassets in Resources */,
 				BCE48B8A56C823D97E1D653C /* Assets.xcassets in Resources */,
 				BCE48254272107BC47F8DC59 /* LaunchScreen.storyboard in Resources */,
+				BCE487C1B30F150C59A5F5D1 /* simpsons_font.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +338,15 @@
 			files = (
 				BCE480CAEDF2B9B432D59F9C /* AppDelegate.swift in Sources */,
 				BCE48243B6EBE43479D4C423 /* SceneDelegate.swift in Sources */,
-				BCE482AE715E7D18BB55EE9E /* ContentView.swift in Sources */,
+				BCE48EF074B33BA6A2F90567 /* DetailItemView.swift in Sources */,
+				BCE48A2AC930568BEE2501A9 /* DetailView.swift in Sources */,
+				BCE48D3B02615448DA4E70D0 /* CollectionView.swift in Sources */,
+				BCE48F5795DE3168224794B3 /* CollectionItemView.swift in Sources */,
+				BCE489803262B1C64B8C1229 /* LoadingView.swift in Sources */,
+				BCE480855CF54A6D8EA92113 /* Color+SystemColors.swift in Sources */,
+				BCE483EEFC750697F5F17CEC /* Font+CustomFont.swift in Sources */,
+				BCE4821A57C270905E2CB199 /* SimpsonsEpisodeModel.swift in Sources */,
+				BCE486EDBE2C9952BD774694 /* DataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

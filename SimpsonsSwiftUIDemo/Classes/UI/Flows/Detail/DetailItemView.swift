@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  DetailItemView.swift
 //  SimpsonsSwiftUIDemo
 //
 //  Created by kojiba on 02.12.2020.
@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct DetailItemView: View {
     var body: some View {
         Text("Hello, World!")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct DetailItemView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        DetailItemView()
     }
 }
