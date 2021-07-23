@@ -23,12 +23,12 @@ struct CollectionView: View {
                 EmptyView()
             }
         }
-            .onAppear(perform: loadData)
+            .onAppear(perform: load_data)
     }
     
     private var stateView: AnyView {
         if let episodesGroups = groups {
-            return collectionView(groups: episodesGroups)
+            return collection_view(groups: episodesGroups)
                 .toAnyView()
 
         } else {
@@ -38,24 +38,24 @@ struct CollectionView: View {
         }
     }
 
-    private func collectionView(groups: [[SimpsonsEpisodeModel]]) -> some View {
+    private func collection_view(groups: [[SimpsonsEpisodeModel]]) -> some View {
         ScrollView {
             VStack {
                 ForEach(groups, id: \.self) { episodeGroup in
                     CollectionItemView(episodes: episodeGroup,
-                        episodeViewClicked: self.episodeViewClicked)
+                        episodeViewClicked: self.episode_view_tapped)
                 }
                 Spacer(minLength: .zero)
             }
         }
     }
     
-    private func episodeViewClicked(_ episode: SimpsonsEpisodeModel) {
+    private func episode_view_tapped(_ episode: SimpsonsEpisodeModel) {
         self.selectedEpisode = episode
         self.isNavigatingDetails = true
     }
 
-    private func loadData() {
+    private func load_data() {
         DispatchQueue.global().async {
             let manager = DataManager.shared
 
